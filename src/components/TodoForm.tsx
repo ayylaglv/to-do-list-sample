@@ -20,6 +20,8 @@ const TodoForm = () => {
       title,
       done: false,
     };
+    console.log(JSON.stringify(todo));
+
     push(todoRef, todo);
   };
 
