@@ -4,6 +4,7 @@ import { getDatabase, ref, push } from "firebase/database";
 
 // Import firebase configuration from firebase.ts file
 import firebaseApp from "../firebase";
+import "./TodoForm.css";
 
 const TodoForm = () => {
   const db = getDatabase(firebaseApp);
@@ -27,9 +28,13 @@ const TodoForm = () => {
 
   return (
     <Form>
-      <Form.Control onChange={handleChange} />
-      <Button type="submit" onClick={addTodo}>
-        Submit
+      <Form.Control
+        type="text"
+        placeholder="Add a task"
+        onChange={handleChange}
+      />
+      <Button className="button" type="submit" onClick={addTodo}>
+        push
       </Button>
     </Form>
   );
