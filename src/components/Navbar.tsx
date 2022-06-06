@@ -1,6 +1,6 @@
 import { Navbar, Container } from "react-bootstrap";
-
-function Navbar() {
+import "bootstrap/dist/css/bootstrap.min.css";
+function Nav() {
   return (
     <Container>
       <Navbar expand="lg" fixed="top" variant="dark" bg="dark">
@@ -11,4 +11,4 @@ function Navbar() {
     </Container>
   );
 }
-export default Navbar;
+export default Nav;

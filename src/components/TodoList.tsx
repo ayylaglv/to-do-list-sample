@@ -6,6 +6,7 @@ import { FormCheck } from "react-bootstrap";
 import firebaseApp from "../firebase";
 
 import { Todo } from "../types";
+import "./TodoList.css";
 
 const TodoList = () => {
   const db = getDatabase(firebaseApp);
@@ -41,7 +42,7 @@ const TodoList = () => {
             key={index}
             checked={todo.done}
             onChange={() => changeTodoCompletion(todo)}
-            label={todo.title}
+            label={todo.title + "  " + todo.category}
           />
         );
       })}

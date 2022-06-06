@@ -20,12 +20,15 @@ const TodoForm = () => {
     const todo = {
       title,
       done: false,
+      category: "personal",
     };
     console.log(JSON.stringify(todo));
 
     push(todoRef, todo);
   };
-
+  const deleteTodo = () => {
+    const todoRef = ref(db, "/todos");
+  };
   return (
     <Form>
       <Form.Control
@@ -34,7 +37,7 @@ const TodoForm = () => {
         onChange={handleChange}
       />
       <Button className="button" type="submit" onClick={addTodo}>
-        push
+        add
       </Button>
     </Form>
   );
